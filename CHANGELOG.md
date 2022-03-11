@@ -1,3 +1,10 @@
+## [1.1.9](https://github.com/awazevr/oneconnect-build-and-restore/compare/v1.1.8...v1.1.9) (2022-03-11)
+
+
+### Bug Fixes
+
+* updated shell command to bash ([8bf5056](https://github.com/awazevr/oneconnect-build-and-restore/commit/8bf5056ee3535381f46f0ebc370367396dbf36a6))
+
 ## [1.1.8](https://github.com/awazevr/oneconnect-build-and-restore/compare/v1.1.7...v1.1.8) (2022-03-11)
 
 
