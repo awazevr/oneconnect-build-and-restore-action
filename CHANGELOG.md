@@ -1,3 +1,10 @@
+## [1.1.8](https://github.com/awazevr/oneconnect-build-and-restore/compare/v1.1.7...v1.1.8) (2022-03-11)
+
+
+### Bug Fixes
+
+* added sonarcloud project id under quotation ([8cac9ba](https://github.com/awazevr/oneconnect-build-and-restore/commit/8cac9ba0f1f6d154531a72de8d41d4514401645d))
+
 ## [1.1.7](https://github.com/awazevr/oneconnect-build-and-restore/compare/v1.1.6...v1.1.7) (2022-03-11)
 
 
