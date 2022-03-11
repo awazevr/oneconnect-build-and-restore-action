@@ -82,10 +82,11 @@ runs:
 
   - name: Package vulnerability check
     if: ${{ inputs.initialise-sonar-cloud == true }}
-    run: dotnet list package --vulnerable --include-transitive | grep -i -v 'has the following vulnerable packages'
     env:
       GHP_USERNAME: ${{ inputs.ghp-username }}
       GHP_PASSWORD: ${{ inputs.ghp-password }}
+    run: dotnet list package --vulnerable --include-transitive | grep -i -v 'has the following vulnerable packages'
+    shell: bash
 
   - name: End SonarScanner
     if: ${{ inputs.initialise-sonar-cloud == true }}
