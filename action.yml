@@ -77,9 +77,7 @@ runs:
 
   - name: Dotnet test with sonarcloud
     if: ${{ inputs.initialise-sonar-cloud == true }}
-    run: dotnet test -c Release --no-restore --collect:"XPlat Code Coverage" -l "trx;LogFileName=results.trx" ./${{ inputs.solution-name }} -- DataCollectionRunSettings.DataCollectors.DataCollector.Configuration.Format=opencover
-    run: ls -al
-    run: pwd
+    run: dotnet test -c Release --no-restore --collect:"XPlat Code Coverage" -l "trx;LogFileName=results.trx" ./${{ inputs.solution-name }} -- DataCollectionRunSettings.DataCollectors.DataCollector.Configuration.Format=opencover && ls -al && pwd
     shell: bash
 
   - name: Package vulnerability check
