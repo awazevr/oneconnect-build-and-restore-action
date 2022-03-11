@@ -1,7 +1,5 @@
 # oneconnect-build-and-restore-action
-This is a GitHub Action meant to be used as a composite action within an existing workflow. This action encapsulates setting up a checkout, build, test and push a docker image to an Elastic Container Register (ECR) in one step.
-
-The action encapsulates the following other actions:
+This is a GitHub Action meant to be used as a composite action within an existing workflow. This action encapsulates setting up a checkout, build, test and Sonarcloud quality gate check in one step.
 
 The action encapsulates the following other actions:
 
