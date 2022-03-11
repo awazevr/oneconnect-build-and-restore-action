@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/awazevr/oneconnect-build-and-restore/compare/v1.0.1...v1.0.2) (2022-03-11)
+
+
+### Bug Fixes
+
+* added shell: bash to restore stage ([9b3c3f5](https://github.com/awazevr/oneconnect-build-and-restore/commit/9b3c3f504cf0c828bf282e4985c628fd8f25e9a9))
+
 ## [1.0.1](https://github.com/awazevr/oneconnect-build-and-restore/compare/v1.0.0...v1.0.1) (2022-03-11)
 
 
