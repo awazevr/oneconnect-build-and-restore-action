@@ -17,6 +17,11 @@ inputs:
     description: 'DotNet Version'
     required: true
 
+  initialise-sonar-cloud:
+    description: 'Initialise SonarCloud'
+    required: false
+    default: false
+
 
 runs:
   using: "composite"
@@ -34,6 +39,14 @@ runs:
       GHP_USERNAME: ${{ inputs.ghp-username }}
       GHP_PASSWORD: ${{ inputs.ghp-password }}
     run: dotnet restore --locked-mode ./${{ inputs.solution-name }}
+    shell: bash
+
+  - name: Install SonarCloud scanner
+    if: ${{ inputs.initialise-sonar-cloud == true }}
+    env:
+      GHP_USERNAME: ${{ inputs.ghp-username }}
+      GHP_PASSWORD: ${{ inputs.ghp-password }}
+    run: dotnet tool install --global dotnet-sonarscanner
     shell: bash
 
   - name: Dotnet build
