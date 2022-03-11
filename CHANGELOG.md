@@ -1,3 +1,10 @@
+## [1.1.10](https://github.com/awazevr/oneconnect-build-and-restore/compare/v1.1.9...v1.1.10) (2022-03-11)
+
+
+### Bug Fixes
+
+* Updated readme ([73d6c9a](https://github.com/awazevr/oneconnect-build-and-restore/commit/73d6c9ae83e00cbd2222ed30e85d06281d071b4d))
+
 ## [1.1.9](https://github.com/awazevr/oneconnect-build-and-restore/compare/v1.1.8...v1.1.9) (2022-03-11)
 
 
