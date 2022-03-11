@@ -1,3 +1,10 @@
+## [1.0.4](https://github.com/awazevr/oneconnect-build-and-restore/compare/v1.0.3...v1.0.4) (2022-03-11)
+
+
+### Bug Fixes
+
+* added all sonarcloud steps with conditional flag ([5935c06](https://github.com/awazevr/oneconnect-build-and-restore/commit/5935c06fbda44229644d645305fade0390261192))
+
 ## [1.0.3](https://github.com/awazevr/oneconnect-build-and-restore/compare/v1.0.2...v1.0.3) (2022-03-11)
 
 
