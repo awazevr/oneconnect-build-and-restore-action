@@ -95,4 +95,13 @@ runs:
     run: dotnet sonarscanner end /d:sonar.login="${{ inputs.sonarcloud-token }}"
     shell: bash
 
+  - name: Publish test report
+    if: ${{ inputs.initialise-sonar-cloud == true }}
+    uses: dorny/test-reporter@v1
+    if: success() || failure()
+    with:
+      name: Test results
+      path: ./**/results.trx
+      reporter: dotnet-trx
+
     
