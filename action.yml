@@ -53,7 +53,7 @@ runs:
     shell: bash
 
   - name: Install SonarCloud scanner
-    if: ${{ inputs.initialise-sonar-cloud == true }}
+    if: ${{ inputs.initialise-sonar-cloud == 'true' }}
     env:
       GHP_USERNAME: ${{ inputs.ghp-username }}
       GHP_PASSWORD: ${{ inputs.ghp-password }}
@@ -61,7 +61,7 @@ runs:
     shell: bash
 
   - name: Initialise SonarScanner
-    if: ${{ inputs.initialise-sonar-cloud == true }}
+    if: ${{ inputs.initialise-sonar-cloud == 'true' }}
     run: dotnet sonarscanner begin /k:${{ inputs.sonarcloud-project-id }} /o:"awazevr" /d:sonar.exclusions="**/**/Repositories/**" /d:sonar.login="${{ inputs.sonarcloud-token }}" /d:sonar.host.url="https://sonarcloud.io" /d:sonar.cs.opencover.reportsPaths="**/TestResults/*/coverage.opencover.xml"
     shell: run
 
@@ -70,17 +70,17 @@ runs:
     shell: bash
 
   - name: Dotnet test
-    if: ${{ inputs.initialise-sonar-cloud != true }}
+    if: ${{ inputs.initialise-sonar-cloud != 'true' }}
     run: dotnet test -c Release --no-restore ./${{ inputs.solution-name }}
     shell: bash
 
   - name: Dotnet test with sonarcloud
-    if: ${{ inputs.initialise-sonar-cloud == true }}
+    if: ${{ inputs.initialise-sonar-cloud == 'true' }}
     run: dotnet test -c Release --no-restore --collect:"XPlat Code Coverage" -l "trx;LogFileName=results.trx" ./${{ inputs.solution-name }} -- DataCollectionRunSettings.DataCollectors.DataCollector.Configuration.Format=opencover
     shell: bash
 
   - name: Package vulnerability check
-    if: ${{ inputs.initialise-sonar-cloud == true }}
+    if: ${{ inputs.initialise-sonar-cloud == 'true' }}
     env:
       GHP_USERNAME: ${{ inputs.ghp-username }}
       GHP_PASSWORD: ${{ inputs.ghp-password }}
@@ -88,7 +88,7 @@ runs:
     shell: bash
 
   - name: End SonarScanner
-    if: ${{ inputs.initialise-sonar-cloud == true }}
+    if: ${{ inputs.initialise-sonar-cloud == 'true' }}
     env:
       GITHUB_TOKEN: ${{ inputs.github-token }}
     run: dotnet sonarscanner end /d:sonar.login="${{ inputs.sonarcloud-token }}"
@@ -96,7 +96,7 @@ runs:
 
   - name: Publish test report
     uses: dorny/test-reporter@v1
-    if: ${{ inputs.initialise-sonar-cloud == true }}
+    if: ${{ inputs.initialise-sonar-cloud == 'true' }}
     with:
       name: Test results
       path: ./**/results.trx
