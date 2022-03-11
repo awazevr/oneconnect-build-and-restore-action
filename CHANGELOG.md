@@ -1,3 +1,10 @@
+## [1.1.7](https://github.com/awazevr/oneconnect-build-and-restore/compare/v1.1.6...v1.1.7) (2022-03-11)
+
+
+### Bug Fixes
+
+* updated boolean to string ([fcf5d50](https://github.com/awazevr/oneconnect-build-and-restore/commit/fcf5d509165c2e5999bfdef4b333d5b27026c1dc))
+
 ## [1.1.6](https://github.com/awazevr/oneconnect-build-and-restore/compare/v1.1.5...v1.1.6) (2022-03-11)
 
 
