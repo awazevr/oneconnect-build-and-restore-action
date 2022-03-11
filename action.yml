@@ -17,6 +17,10 @@ inputs:
     description: 'DotNet Version'
     required: true
 
+  initialise-sonar-cloud:
+    description: 'Initialise SonarCloud'
+    required: true
+
   sonarcloud-project-id:
     description: 'SonarCloud Project Id'
     required: false
@@ -24,11 +28,6 @@ inputs:
   sonarcloud-token:
     description: 'SonarCloud Token'
     required: false
-
-  initialise-sonar-cloud:
-    description: 'Initialise SonarCloud'
-    required: false
-    default: false
 
   github-token:
     description: 'Github Token'
