@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/awazevr/oneconnect-build-and-restore/compare/v1.1.0...v1.1.1) (2022-03-11)
+
+
+### Bug Fixes
+
+* combined two if statements ([04bd0e9](https://github.com/awazevr/oneconnect-build-and-restore/commit/04bd0e9482854c84578118e7334a0431a0480c86))
+
 # [1.1.0](https://github.com/awazevr/oneconnect-build-and-restore/compare/v1.0.5...v1.1.0) (2022-03-11)
 
 
