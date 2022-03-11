@@ -37,8 +37,10 @@ runs:
 
   - name: Dotnet build
     run: dotnet build -c Release --no-restore ./${{ inputs.solution-name }}
+    shell: bash
 
   - name: Dotnet test
     run: dotnet test -c Release --no-restore ./${{ inputs.solution-name }}
+    shell: bash
 
     
