@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/awazevr/oneconnect-build-and-restore/compare/v1.0.5...v1.1.0) (2022-03-11)
+
+
+### Features
+
+* added publish test reports ([968eaba](https://github.com/awazevr/oneconnect-build-and-restore/commit/968eaba65dd6702817988361f12341aee6952d43))
+
 ## [1.0.5](https://github.com/awazevr/oneconnect-build-and-restore/compare/v1.0.4...v1.0.5) (2022-03-11)
 
 
