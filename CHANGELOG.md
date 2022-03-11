@@ -1,3 +1,10 @@
+## [1.0.3](https://github.com/awazevr/oneconnect-build-and-restore/compare/v1.0.2...v1.0.3) (2022-03-11)
+
+
+### Bug Fixes
+
+* added sonarcloud setup ([b1c8d61](https://github.com/awazevr/oneconnect-build-and-restore/commit/b1c8d61582fc72420b9f40b977a4940b0dc1fffe))
+
 ## [1.0.2](https://github.com/awazevr/oneconnect-build-and-restore/compare/v1.0.1...v1.0.2) (2022-03-11)
 
 
