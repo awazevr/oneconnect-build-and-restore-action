@@ -1,3 +1,10 @@
+## [1.1.6](https://github.com/awazevr/oneconnect-build-and-restore/compare/v1.1.5...v1.1.6) (2022-03-11)
+
+
+### Bug Fixes
+
+* Made initialise-sonar-cloud a required pameter and updated readme ([bf748c9](https://github.com/awazevr/oneconnect-build-and-restore/commit/bf748c9f4ea986746ce846fb69d2af1ba6affec3))
+
 ## [1.1.5](https://github.com/awazevr/oneconnect-build-and-restore/compare/v1.1.4...v1.1.5) (2022-03-11)
 
 
