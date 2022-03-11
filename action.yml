@@ -1,19 +1,44 @@
-name: "Basic action template"
-description: "Checkout and scanning ..."
+name: "OneConnect Build and Restore"
+description: "Building and restoring ..."
 inputs:
-  target:
-    description: 'Parameter 1'
+  ghp-username:
+    description: 'Username'
+    required: true
+
+  ghp-password:
+    description: 'Password'
+    required: true
+
+  solution-name:
+    description: 'Solution name'
+    required: true
+
+  dotnet-version:
+    description: 'DotNet Version'
     required: true
 
 
 runs:
   using: "composite"
   steps:
-    - name: Checkout repo
-      uses: actions/checkout@v2
-    - name: Provide a name for this template
-      uses: awazevr/basic-action-template@v1.0.0
-      with:
-        target: ${{ inputs.target }} 
+  - name: Checkout repo
+    uses: actions/checkout@v2
+
+  - name: Setup .NET Core SDK
+    uses: actions/setup-dotnet@v1
+    with:
+      dotnet-version: ${{ inputs.dotnet-version }}
+
+  - name: Dotnet restore
+    run: dotnet restore --locked-mode ./${{ inputs.solution-name }}
+    env:
+      GHP_USERNAME: ${{ inputs.ghp-username }}
+      GHP_PASSWORD: ${{ inputs.ghp-password }}
+
+  - name: Dotnet build
+    run: dotnet build -c Release --no-restore ./${{ inputs.solution-name }}
+
+  - name: Dotnet test
+    run: dotnet test -c Release --no-restore ./${{ inputs.solution-name }}
 
     
