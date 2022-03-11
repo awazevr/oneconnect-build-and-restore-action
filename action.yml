@@ -96,9 +96,8 @@ runs:
     shell: bash
 
   - name: Publish test report
-    if: ${{ inputs.initialise-sonar-cloud == true }}
+    if: (${{ inputs.initialise-sonar-cloud == true }} && (success() || failure()))
     uses: dorny/test-reporter@v1
-    if: success() || failure()
     with:
       name: Test results
       path: ./**/results.trx
