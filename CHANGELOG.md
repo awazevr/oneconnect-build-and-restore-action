@@ -1,3 +1,10 @@
+## [1.1.5](https://github.com/awazevr/oneconnect-build-and-restore/compare/v1.1.4...v1.1.5) (2022-03-11)
+
+
+### Bug Fixes
+
+* removed success || failure from publish stage ([75f6695](https://github.com/awazevr/oneconnect-build-and-restore/commit/75f669531758fea63882640e4186888c92086038))
+
 ## [1.1.4](https://github.com/awazevr/oneconnect-build-and-restore/compare/v1.1.3...v1.1.4) (2022-03-11)
 
 
