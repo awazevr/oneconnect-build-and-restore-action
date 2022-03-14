@@ -3,9 +3,9 @@ This is a GitHub Action meant to be used as a composite action within an existin
 
 The action encapsulates the following other actions:
 
-- actions/checkout
-- actions/setup-dotnet
-- dorny/test-reporter
+- [actions/checkout](https://github.com/actions/checkout)
+- [actions/setup-dotnet](https://github.com/actions/setup-dotnet)
+- [dorny/test-reporter](https://github.com/dorny/test-reporter)
 
 
 ## Inputs
