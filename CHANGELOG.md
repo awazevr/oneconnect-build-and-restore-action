@@ -1,3 +1,10 @@
+## [1.1.13](https://github.com/awazevr/oneconnect-build-and-restore/compare/v1.1.12...v1.1.13) (2022-03-29)
+
+
+### Bug Fixes
+
+* excluded program.cs from code coverage report ([9f98438](https://github.com/awazevr/oneconnect-build-and-restore/commit/9f98438e7a2a7b80b64243caa333c17d914eeffc))
+
 ## [1.1.12](https://github.com/awazevr/oneconnect-build-and-restore/compare/v1.1.11...v1.1.12) (2022-03-29)
 
 
