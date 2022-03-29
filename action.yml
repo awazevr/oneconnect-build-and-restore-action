@@ -62,7 +62,7 @@ runs:
 
   - name: Initialise SonarScanner
     if: ${{ inputs.initialise-sonar-cloud == 'true' }}
-    run: dotnet sonarscanner begin /k:"${{ inputs.sonarcloud-project-id }}" /o:"awazevr" /d:sonar.coverage.exclusions="**/**/program.cs,**/**/Options/**" /d:sonar.exclusions="**/**/Repositories/**" /d:sonar.login="${{ inputs.sonarcloud-token }}" /d:sonar.host.url="https://sonarcloud.io" /d:sonar.cs.opencover.reportsPaths="**/TestResults/*/coverage.opencover.xml"
+    run: dotnet sonarscanner begin /k:"${{ inputs.sonarcloud-project-id }}" /o:"awazevr" /d:sonar.coverage.exclusions="**/*Program.cs,**/**/Options/**" /d:sonar.exclusions="**/**/Repositories/**" /d:sonar.login="${{ inputs.sonarcloud-token }}" /d:sonar.host.url="https://sonarcloud.io" /d:sonar.cs.opencover.reportsPaths="**/TestResults/*/coverage.opencover.xml"
     shell: bash
 
   - name: Dotnet build
